@@ -4,7 +4,7 @@
 
 ### Choose configuration
 - The configuration is read from a json file, namely **json.config**. There we can choose the deduplicator method and which images to check for duplicates.
-- The "*check_all*" key corresponds to the method used for detecting duplicates. 
+- The "*method*" key corresponds to the method used for detecting duplicates. 
   * *Hash* uses distance between image hashes
   * *Hist* uses correlation between image histograms  
 - The "*relative_path*" key corresponds to the folder, where the .jpg images live.

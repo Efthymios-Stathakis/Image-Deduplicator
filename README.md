@@ -3,7 +3,7 @@
 ## How to run
 
 ### Choose configuration
-- The configuration for executing the deduplicator module is read from a json file, namely **json.config**. There we can choose the deduplicator method and which images to check for duplicates.
+- The configuration for executing the deduplicator module is read from a json file, namely **config.json**. There we can choose the deduplicator method and which images to check for duplicates.
 - The "*method*" key corresponds to the method used for detecting duplicates. 
   * *Hash* uses distance between image hashes
   * *Hist* uses correlation between image histograms  

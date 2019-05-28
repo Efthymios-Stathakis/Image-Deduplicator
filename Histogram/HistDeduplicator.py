@@ -6,9 +6,8 @@ import json
 class HistDeduplicator():
     
     """
-    This class reads and stores all images in a target folder. For each image, 
-    it computes the histogram and it computes the correlation between histograms
-    to identify possible duplicates
+    This class reads and stores all images in a target folder. For each image, it computes 
+    the histogram and the correlation between histograms to identify possible duplicates.
     """
     def __init__(self, rel_path='/images/'):
         """
@@ -24,12 +23,12 @@ class HistDeduplicator():
 
         # Load list of images
         for img_idx, img_name in enumerate(self._lof_filenames):
-            # Load image and convert to grayscale
+            # Load images and store them to list
             self._lof_images.append(cv2.imread(self._img_filepath+img_name))
 
     def _compute_dof_histograms(self):
         """
-        For each image compute the normalized histogram using 256 bins
+        For each image compute the normalized histogram using 256 bins.
         """
         dof_histograms = dict()
         for img_idx, img in enumerate(self._lof_images):
@@ -40,8 +39,8 @@ class HistDeduplicator():
 
     def _compute_histogram_corr(self, img_name):
         """
-        Compute correlation between the histogram of the selected image, 
-        given as input, and the histograms of all other images in the folder 
+        Compute correlation between the histogram of the selected image, that 
+        given as input, and the histograms of all other images in the folder. 
         Parameters
         ----------
         img_name : string that corresponds to the filename that we want to check for duplicates

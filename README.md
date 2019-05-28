@@ -17,9 +17,9 @@ pip3 install -r requirements.txt
 python3 run.py
 ```
 ## To-Do List
-Make the threshold for similarity, e.g., correlation threshold or mean distance threshold, parametrizable
+Make the threshold for similarity, e.g., correlation threshold or mean distance threshold, parametrizable. For the time being, the thresholds have fixed values.
 
 ## Possible Improvements
 1. Use and exploit all channels in the image instead of converting it to gray scale or using just one channel.
-2. Test different hashing function, e.g., average hash, difference hash or perceptual hash.
+2. Test different hashing function, e.g., average hash, difference hash or perceptual hash, perhaps even make the choice of hash function a parameter.
 3. Use annotated data, e.g., when know that two ads are duplicated. In this case, we can use all the abovementioned features. The similarity metrics between images, expressed in terms of distances between hashes or correlation of histograms, can be fed as input to some ML algorith that will learn disciminating rules.
